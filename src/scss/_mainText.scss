@@ -1,0 +1,57 @@
+.mainTextContainer {
+    margin: 0 .25rem;
+    height: 100vh;
+    
+    .heroText {
+        font-size: 14vw;
+        font-weight: normal;
+        span {
+            font-weight: bold;
+        }
+    }
+    
+    .subTextContainer {
+        font-size: 7vw;
+        .subTextHead {
+            font-weight: normal;
+            color: #C0C0C0;
+            margin-bottom: 1rem;
+            padding-top: 2rem;
+        }
+        .subTextList {
+            margin-top: 1rem;
+            margin-bottom: 3.5rem;
+            padding-left: 1.25rem;
+            line-height: 4.5rem;
+            list-style: none;
+            font-size: 10vw;
+        }
+    }
+
+    .buttonLinksContainer {
+        margin: auto;
+        width: 50%;
+        a {
+            display: block;
+            padding: .5rem;
+            margin: 1.25rem 0;
+            font-size: 7vw;
+            text-align: center;
+            border: 1px solid #C0C0C0;
+        }
+        :visited, :link {
+            text-decoration: none;
+            color: white;
+        }
+        }
+
+    .externalLinksContainer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .externalLinksContainer {
+        display: block;
+    }
+}

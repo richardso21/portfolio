@@ -1,4 +1,22 @@
+@import "mainText";
+@import "workGallery";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 body {
     margin: 0;
     padding: 0;
+    background: #494949;
+    color: white;
+    font-family: 'Fira Code', monospace;
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
 }
