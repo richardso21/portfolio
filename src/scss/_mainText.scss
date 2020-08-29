@@ -1,57 +1,89 @@
 .mainTextContainer {
-    margin: 0 .25rem;
-    height: 100vh;
-    
-    .heroText {
-        font-size: 14vw;
-        font-weight: normal;
-        span {
-            font-weight: bold;
-        }
+  margin: 0 0.25rem;
+  height: 100vh;
+  position: relative;
+
+  .heroText {
+    font-size: 14vw;
+    font-weight: normal;
+    span {
+      font-weight: bold;
     }
-    
+  }
+
+  .subTextContainer {
+    font-size: 7vw;
+    .subTextHead {
+      font-weight: normal;
+      color: #c0c0c0;
+      margin-bottom: 1rem;
+    }
+    .subTextList {
+      margin-top: 1rem;
+      margin-bottom: 3.5rem;
+      padding-left: 1.25rem;
+      line-height: 8.5vh;
+      list-style: none;
+      font-size: 10vw;
+    }
+  }
+
+  .buttonLinksContainer {
+    margin: auto;
+    width: 50%;
+    a {
+      display: block;
+      padding: 0.5rem;
+      margin: 1.25rem 0;
+      font-size: 7vw;
+      text-align: center;
+      border: 1px solid #c0c0c0;
+    }
+    :visited,
+    :link {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  .externalLinksContainer {
+    display: none;
+  }
+}
+
+@media #{$desktop} {
+  .mainTextContainer {
+    flex: 1 1 25%;
+
+    .heroText {
+      font-size: 3.25vw;
+    }
+
     .subTextContainer {
-        font-size: 7vw;
-        .subTextHead {
-            font-weight: normal;
-            color: #C0C0C0;
-            margin-bottom: 1rem;
-            padding-top: 2rem;
-        }
-        .subTextList {
-            margin-top: 1rem;
-            margin-bottom: 3.5rem;
-            padding-left: 1.25rem;
-            line-height: 4.5rem;
-            list-style: none;
-            font-size: 10vw;
-        }
+      font-size: 1.75vw;
+
+      .subTextList {
+        font-size: 2.5vw;
+      }
     }
 
     .buttonLinksContainer {
-        margin: auto;
-        width: 50%;
-        a {
-            display: block;
-            padding: .5rem;
-            margin: 1.25rem 0;
-            font-size: 7vw;
-            text-align: center;
-            border: 1px solid #C0C0C0;
-        }
-        :visited, :link {
-            text-decoration: none;
-            color: white;
-        }
-        }
+      a {
+        font-size: 2vw;
+      }
+    }
 
     .externalLinksContainer {
-        display: none;
+      width: 80%;
+      position: absolute;
+      left: 50%;
+      bottom: 5%;
+      transform: translate(-50%, 0%);
+      display: flex;
+      a {
+        flex: 1 1 auto;
+        padding: 1.25vw;
+      }
     }
-}
-
-@media screen and (min-width: 1024px) {
-    .externalLinksContainer {
-        display: block;
-    }
+  }
 }
