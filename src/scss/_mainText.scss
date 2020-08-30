@@ -6,6 +6,7 @@
   .heroText {
     font-size: 14vw;
     font-weight: normal;
+    
     span {
       font-weight: bold;
     }
@@ -13,11 +14,13 @@
 
   .subTextContainer {
     font-size: 7vw;
+    
     .subTextHead {
       font-weight: normal;
       color: #c0c0c0;
       margin-bottom: 1rem;
     }
+
     .subTextList {
       margin-top: 1rem;
       margin-bottom: 3.5rem;
@@ -31,6 +34,7 @@
   .buttonLinksContainer {
     margin: auto;
     width: 50%;
+    
     a {
       display: block;
       padding: 0.5rem;
@@ -39,6 +43,7 @@
       text-align: center;
       border: 1px solid #c0c0c0;
     }
+
     :visited,
     :link {
       text-decoration: none;
@@ -48,6 +53,10 @@
 
   .externalLinksContainer {
     display: none;
+    
+    img {
+      filter: invert(100%) brightness(75%);
+    }
   }
 }
 
@@ -62,27 +71,43 @@
     .subTextContainer {
       font-size: 1.75vw;
 
+      .subTextHead {
+        margin-bottom: 1vw;
+      }
+
       .subTextList {
         font-size: 2.5vw;
+        margin-top: 1vw;
+        margin-bottom: 3.5vw;
+        padding-left: 1.25vw;
       }
     }
 
     .buttonLinksContainer {
       a {
         font-size: 2vw;
+        padding: 0.5vw;
+        margin: 1.25vw 0;
+      }
+      #worksLink {
+        font-size: 1.75vw;
+      }
+      #worksLink::after {
+        content: " >>";
       }
     }
 
     .externalLinksContainer {
-      width: 80%;
+      width: 70%;
       position: absolute;
       left: 50%;
       bottom: 5%;
       transform: translate(-50%, 0%);
       display: flex;
+      
       a {
         flex: 1 1 auto;
-        padding: 1.25vw;
+        margin: 1.25vw;
       }
     }
   }

@@ -47,6 +47,9 @@
 .mainTextContainer .externalLinksContainer {
   display: none;
 }
+.mainTextContainer .externalLinksContainer img {
+  filter: invert(100%) brightness(75%);
+}
 
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
   .mainTextContainer {
@@ -58,14 +61,28 @@
   .mainTextContainer .subTextContainer {
     font-size: 1.75vw;
   }
+  .mainTextContainer .subTextContainer .subTextHead {
+    margin-bottom: 1vw;
+  }
   .mainTextContainer .subTextContainer .subTextList {
     font-size: 2.5vw;
+    margin-top: 1vw;
+    margin-bottom: 3.5vw;
+    padding-left: 1.25vw;
   }
   .mainTextContainer .buttonLinksContainer a {
     font-size: 2vw;
+    padding: 0.5vw;
+    margin: 1.25vw 0;
+  }
+  .mainTextContainer .buttonLinksContainer #worksLink {
+    font-size: 1.75vw;
+  }
+  .mainTextContainer .buttonLinksContainer #worksLink::after {
+    content: " >>";
   }
   .mainTextContainer .externalLinksContainer {
-    width: 80%;
+    width: 70%;
     position: absolute;
     left: 50%;
     bottom: 5%;
@@ -74,16 +91,45 @@
   }
   .mainTextContainer .externalLinksContainer a {
     flex: 1 1 auto;
-    padding: 1.25vw;
+    margin: 1.25vw;
   }
 }
+.workGalleryContainer {
+  display: flex;
+  flex-direction: column;
+}
+.workGalleryContainer .work {
+  height: 75vh;
+}
+.workGalleryContainer .eyePause {
+  background: red;
+}
+.workGalleryContainer .BAD {
+  background: blue;
+}
+.workGalleryContainer .exploreJapan {
+  background: orange;
+}
+.workGalleryContainer .mediumPosts {
+  background: green;
+}
+
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
   .workGalleryContainer {
+    flex-direction: row;
     flex: 3 1 75%;
     width: 100%;
     border-left: 0.2vw solid white;
+    flex-wrap: wrap;
+  }
+  .workGalleryContainer .work {
+    flex: 0 1 50%;
   }
 }
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;

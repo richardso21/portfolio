@@ -1691,15 +1691,17 @@ function toComment(sourceMap) {
 /******/ ]);
 });
 },{}],"index.js":[function(require,module,exports) {
-var Swup = require('swup').default;
+var Swup = require("swup").default;
 
-var SwupOverlayTheme = require('@swup/overlay-theme');
+var SwupOverlayTheme = require("@swup/overlay-theme");
 
-var swup = new Swup({
+var options = {
+  linkSelector: 'a[href^="' + window.location.origin + '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup])',
   plugins: [new SwupOverlayTheme({
-    direction: 'to-bottom'
+    direction: "to-bottom"
   })]
-});
+};
+var swup = new Swup(options);
 },{"swup":"../node_modules/swup/lib/index.js","@swup/overlay-theme":"../node_modules/@swup/overlay-theme/lib/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -1728,7 +1730,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36773" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41659" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

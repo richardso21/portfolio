@@ -1,7 +1,35 @@
+.workGalleryContainer {
+  display: flex;
+  flex-direction: column;
+  .work {
+    height: 75vh;
+    // flex: 0 1 auto;
+  }
+
+  .eyePause {
+    background: red;
+  }
+  .BAD {
+    background: blue;
+  }
+  .exploreJapan {
+    background: orange;
+  }
+  .mediumPosts {
+    background: green;
+  }
+}
+
+
 @media #{$desktop} {
   .workGalleryContainer {
+    flex-direction: row;
     flex: 3 1 75%;
     width: 100%;
     border-left: .2vw solid white;
+    flex-wrap: wrap;
+    .work {
+      flex: 0 1 50%;
+    }
   }
 }
